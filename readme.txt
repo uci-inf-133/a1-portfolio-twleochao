@@ -25,12 +25,12 @@ Talking to classmates about class material, assignment requirements, etc. is a g
 - Image with descriptive alt attributes
 - Appropriate headings and paragraph text
 - Links to external pages (Linkedin, Github)
-- Multiple pages (About, Porjects), with appropriate navigation between them
+- Multiple pages (About, Projects), with appropriate navigation between them
 - Semantic HTML tags, header, footer etc.
 - Custom Bio
 
 (b) CSS features
-- Custom Dark theme, #252a3 backgroud, #48c774 accent
+- Custom Dark theme, #252a34 backgroud, #48c774 accent
 - Modified padding/margins for readability
 - Leveraged Bootstrap for responsive columns
 
@@ -40,7 +40,14 @@ Talking to classmates about class material, assignment requirements, etc. is a g
 
 
 3. Did you ignore any of the warnings or errors presented by the accessibility checker? If so, why does this not seem like an accessibility concern? If it's useful, you can consolidate your thoughts on multiple warnings/errors if the rationale is similar.
+The accessibility checker reported 0 known problems for all three of my html document. But there were a few potential problems that were flagged.
 
+The majority of them are as the followings, and I've decided to ignore them for the reasons as such:
+- Script/Canvas Warnings: The 'cranes.js' script and <canvas> element were flagged for potential flickering or color issues. This animation is purely decorative (aesthetic background), moves slowly without flashing (no seizure risk), and contains no content essential to the user's understanding of the page.
+- Navigation & Skip Links: The checker noted a missing "Skip to Content" link and site map. Given the portfolio's simplicity (only 3 pages) and very short navigation menu, I felt that a skip link and site map would actually make it more clunky and was unnecessary.
+- Link Text: The checker flagged links like "About" and "Projects" for review. Since these are descriptive by nature I figured they didn't need one. Other flagged items like the socials icon links utilize `aria-label` attributes to ensure they are accessible to screen readers.
+- Headings & Structure: There were also warnings regarding <h2> tags and consistent navigation. However, the heading structure follows a logical hierarchy (h1 -> h2 -> h3), and the navigation bar is identical across all pages as required.
+- Color Contrast: Some of the Dark Mode color combinations were flagged. However, these are intentional design choices to maintain the theme while ensuring readability.
 
 
 4. How long, in hours, did it take you to complete this assignment?
